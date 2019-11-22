@@ -1,0 +1,132 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Empregando a inclusão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ordem de carregamento de css -->
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/menu.css">
+</head>
+
+<body>
+  <!-- menu navbar -->
+    <nav class="white">
+        <div class="nav-wrapper nav-padding z-depth-2">
+            <div class="left">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small-only"><i class="material-icons black-text"></i></a>
+                <a href="/" class="left blue-compass brand-logo logo position-relative hide-on-med-and-down white-text"><i class="logo-img"></i>Empregando a <b class="orange-text">inclusão</b></a>
+                <ul class="left hide-on-med-and-down position-relative left-divider show show-on-med-and-up">
+                    <li><a href="/" class="blue-compass white-text">Área do candidato</a></li>
+                    <li><a href="/" class="blue-compass white-text">Área da empresa</a></li>
+                    <li><a href="/" class="blue-compass white-text">Leis trabalhistas</a></li>
+                </ul>
+            </div>
+            <ul class="right hide-on-med-and-down">
+                <!-- Em caso de visitante, mostra link login e botão cadastro-->
+                <li><a href="/login" class="btn bg-blue-compass rounded white-text">Entrar</a></li>
+                <!-- Em caso de usuário logado (user ou admin), mostra o olá e o menu dropdown -->
+                <li class="blue-compass white-text"></li>
+            </ul>            
+        </div>
+    </nav>
+<!-- fim do menu navbar -->
+
+<!-- inicio do formulario -->
+    <div class="row formulario">
+        <div class="section">
+          <div class="row">
+            <form class="col s12 " >
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input id="first_name" type="text" class="validate">
+                    <label class="active" for="first_name">Nome</label>
+                  </div>
+              </div>                                            
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label class="active" for="email">Email</label>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s6 m6">
+                      <input id="password" type="password" class="validate">
+                      <label class="active" for="password">Senha</label>
+                  </div>
+                  <div class="input-field col s6 m6">
+                      <input id="repsenha" type="password" class="active >%=user.invalidClass%>" placeholder=" " name="repsenha">
+                      <label class="active" for="repsenha">Repetir senha</label>
+                  </div>
+              </div>
+
+
+      <!-- inicio do select do enquadramento -->
+      <select class="browser-default">
+        <option value="" disabled selected>Enquadramento</option>
+        <optgroup label="Deficiência Física">
+                <option value="Deficiência Física - Amputação">Amputação</option>
+                <option value="Deficiência Física - Hemiplegia">Hemiplegia</option>
+                <option value="Deficiência Física - Membros com deformidade congênita ou adquirida">Membros com deformidade congênita ou adquirida</option>
+                <option value="Deficiência Física - Monoparesia">Monoparesia</option>
+                <option value="Deficiência Física - Monoplegia">Monoplegia</option>
+                <option value="Deficiência Física - Paralisia cerebral">Paralisia cerebral</option>
+                <option value="Deficiência Física - Paraparesia">Paraparesia</option>
+                <option value="Deficiência Física - Paraplegia">Paraplegia</option>
+                <option value="Deficiência Física - Tetraparesia">Tetraparesia</option>
+                <option value="Deficiência Física - Tetraplegia">Tetraplegia</option>
+                <option value="Deficiência Física - Triparesia">Triparesia</option>
+                <option value="Deficiência Física - Triplegia">Triplegia</option>
+                <option value="Deficiência Física - Nanismo">Nanismo</option>
+                <option value="Deficiência Física - Ostomia">Ostomia</option>
+                <option value="Deficiência Física - Hemiparesia">Hemiparesia</option>
+                <option value="Deficiência Física - Outros">Outros</option>
+        </optgroup>
+        <optgroup label="Deficiência Auditiva">
+                <option value="Deficiência Auditiva - Surdez moderada">Surdez moderada</option>
+                <option value="Deficiência Auditiva - Surdez severa">Surdez severa</option>
+                <option value="Deficiência Auditiva - Anacusia">Anacusia</option>
+        </optgroup>
+        <optgroup label="Deficiência Visual">
+                <option value="Deficiência Visual - Baixa Visão">Baixa Visão</option>
+                <option value="Deficiência Visual - Cegueira">Cegueira</option>
+                <option value="Deficiência Visual - Visão Monocular">Visão Monocular</option>
+        </optgroup>
+        <optgroup label="Deficiência Intelectual">
+                <option value="Deficiência Intelectual">Deficiência Intelectual</option>
+        </optgroup>
+        <optgroup label="Deficiência Psicossocial">
+                <option value="Deficiência Psicossocial">Deficiência Psicossocial</option>
+        </optgroup>
+        <optgroup label="Reabilitado do INSS">
+                <option value="Reabilitado do INSS">Reabilitado do INSS</option>
+        </optgroup>
+      </select>
+      <!-- fim do enquadramento -->
+
+      <!-- checkbox do aviso -->
+                      <div class="aviso">
+                            <p>
+                              <label>
+                                      <input type="checkbox" class="check" checked="checked" />
+                                      <span>Aviso: cadastro exclusivo para pessoas com deficiência. Declaro que sou pessoa com deficiência ou reabilitado do INSS nos termos da legislação brasileira. </span>
+                              </label>
+                             </p>                                                                     
+                      </div>
+      <!-- fim do checbox aviso -->
+
+      <!-- botão cadastrar -->
+                <div class="col s12 center btn-margin-top cadastrar">
+                    <input class="btn bg-blue-compass rounded" type="submit" value="Cadastrar" />
+               </div>
+            </form>
+      <!-- fim do formulario -->
+          </div>
+        </div>
+    </div>
+
+ <script type="text/javascript" src="../../app/routes/cadastro.js"></script>
+</body>
+</html>
