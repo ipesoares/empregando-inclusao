@@ -9,12 +9,14 @@
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/cadastro.css">
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/menu.css">
+    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="../public/javascripts/validacao.js"></script>
 </head>
 
 <body>
   <!-- menu navbar -->
     <nav class="white">
-        <div class="nav-wrapper nav-padding z-depth-2">
+        <div class="nav-wrapper nav-padding">
             <div class="left">
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small-only"><i class="material-icons black-text"></i></a>
                 <a href="/" class="left blue-compass brand-logo logo position-relative hide-on-med-and-down white-text"><i class="logo-img"></i>Empregando a <b class="orange-text">inclusão</b></a>
@@ -36,35 +38,39 @@
 
 <!-- inicio do formulario -->
     <div class="row formulario">
+      <h2>Cadastre seu Currículo</h2>
         <div class="section">
+        <p class="contato">INFORMAÇÕES DE CONTATO</p>        
           <div class="row">
-            <form class="col s12 " >
+            <form action="/cadastrar-pessoa" method="POST" class="col s12" onsubmit="return validacao()">
               <div class="row">
                   <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate">
-                    <label class="active" for="first_name">Nome</label>
+                    <input id="nome" type="text" name="nome" class="validate">
+                    <label class="active" for="nome">Nome</label>
                   </div>
               </div>                                            
               <div class="row">
                   <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" name="email" class="validate">
                     <label class="active" for="email">Email</label>
                   </div>
               </div>
               <div class="row">
                   <div class="input-field col s6 m6">
-                      <input id="password" type="password" class="validate">
+                      <input id="password" type="password" name="senha" class="validate">
                       <label class="active" for="password">Senha</label>
                   </div>
                   <div class="input-field col s6 m6">
-                      <input id="repsenha" type="password" class="active >%=user.invalidClass%>" placeholder=" " name="repsenha">
+                      <input id="repsenha" type="password" name="repsenha" class="active >%=user.invalidClass%>" placeholder=" " name="repsenha">
                       <label class="active" for="repsenha">Repetir senha</label>
                   </div>
               </div>
+               
+                
 
 
       <!-- inicio do select do enquadramento -->
-      <select class="browser-default">
+      <select class="browser-default" id="enquadramento" name="enquadramento">
         <option value="" disabled selected>Enquadramento</option>
         <optgroup label="Deficiência Física">
                 <option value="Deficiência Física - Amputação">Amputação</option>
@@ -127,6 +133,5 @@
         </div>
     </div>
 
- <script type="text/javascript" src="../../app/routes/cadastro.js"></script>
 </body>
 </html>
