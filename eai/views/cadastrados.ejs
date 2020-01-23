@@ -1,0 +1,95 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Empregando a inclusão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ordem de carregamento de css -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/menu.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/materialize.css">
+    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="../public/javascripts/validacao.js"></script>
+</head>
+
+<body>
+  <!-- menu navbar -->
+    <nav class="white">
+        <div class="nav-wrapper nav-padding">
+            <div class="left">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small-only"><i class="material-icons black-text"></i></a>
+                <a href="/" class="left blue-compass brand-logo logo position-relative hide-on-med-and-down white-text"><i class="logo-img"></i>Empregando a <b class="orange-text">inclusão</b></a>
+                <ul class="left hide-on-med-and-down position-relative left-divider show show-on-med-and-up">
+                    <li><a href="/" class="blue-compass white-text textmenu">Área do candidato</a></li>
+                    <li><a href="/" class="blue-compass white-text textmenu">Área da empresa</a></li>
+                    <li><a href="/" class="blue-compass white-text textmenu">Leis trabalhistas</a></li>
+                </ul>
+            </div>
+            <ul class="right hide-on-med-and-down">
+                <!-- Em caso de visitante, mostra link login e botão cadastro-->
+                <li><a href="/login" class="btn bg-blue-compass rounded white-text">Entrar</a></li>
+                <!-- Em caso de usuário logado (user ou admin), mostra o olá e o menu dropdown -->
+                <li class="blue-compass white-text"></li>
+            </ul>            
+        </div>
+    </nav>
+<!-- fim do menu navbar -->
+<div class="row formulario">
+    <h2>Pessoas cadastradas</h2>
+          <div class="section">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+            <tbody>
+              <% for (i = 0; i<pessoas.length; i++){ %>
+              <tr>
+                <td><%= i+1 %></td>
+                <td>
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header">
+                        <!-- <i class="material-icons">filter_drama</i> -->
+                        <%= pessoas[i].nome %>
+                        <i class="material-icons">add_circle</i>
+                        </div>
+                      <div class="collapsible-body">
+                        <p><b>CONTANTO</b></p>
+                          <p>3232-0321</p>
+                          <p>tamycandy@hootmail.com</p>
+                          <p><b>ENDEREÇO</b></p>
+                          <p>Rua Bento Gonçalves 472</p>
+                          <p>Bairro Cidade Nova</p>
+                          <p><b>Enquadramento</b></p>
+                          <p><%= pessoas[i].enquadramento %></p>
+                          <p><b>Experiência Profissional</b></p>
+                          <p>Atacadão</p>
+                          <p>Bobs</p>
+                          <p><b>Observações</b></p>
+                          <p>tal tal tal</p>
+                          <p>blá bla bla</p>
+                    </li>                 
+                  </ul></td>
+                <td>18/10/2020</td>
+              </tr>
+            <% } %>
+            </tbody>
+            </table>   
+          </div>
+        </div>   
+
+        
+
+
+
+           
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+</body>
+</html>

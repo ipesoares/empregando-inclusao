@@ -5,12 +5,12 @@
 
 .section{
     background-color: white;
-    width: 700px;
+    width: 1000px;
     border-color: gray;
     border-style: outset;
     margin-left: auto;
     margin-right: auto;
-    
+    margin-bottom: 50px;     
 }
 
 .cadastrar{
@@ -43,3 +43,23 @@ h2{text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Ar
 .contato{
     text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 24px;
 }
+
+.textmenu{
+    font-size: 20px;
+}
+
+h4{
+    text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+td,
+th {
+    padding: 15px 15px !important;
+   }
+
+.collapsible-header i {
+    margin-left: auto !important;
+    color: #26a69a;
+}
+
+

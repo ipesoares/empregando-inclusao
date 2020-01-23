@@ -1,12 +1,17 @@
 //validação do form usando jquery
 // debugger
+$(document).ready(function(){
+    $('.modal-trigger').leanModal({
+        dismissible: true // Modal can be dismissed by clicking outside of the modal       
+      });
+  });
+
 function validacao(){
     var nome = $("#nome").val();
     var email = $("#email").val();
     var senha = $("#password").val();
     var repsenha = $("#repsenha").val();
     var enquadramento = $("#enquadramento").val();
-
 
     if(nome == ""){
         alert("insira um nome")
@@ -18,22 +23,19 @@ function validacao(){
         alert("insira um e-mail")
         $("email").focus();
         return false;
-
     }
 
     if(senha == ""){
         alert("insira uma senha")
         $("senha").focus();
         return false;
-
     }
 
     if(repsenha != senha){
         alert("senha incorreta")
         $("repsenha").focus();
         return false;
-
     }
 
     return true
-}
+} 

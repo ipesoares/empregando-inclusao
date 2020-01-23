@@ -21,14 +21,14 @@
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small-only"><i class="material-icons black-text"></i></a>
                 <a href="/" class="left blue-compass brand-logo logo position-relative hide-on-med-and-down white-text"><i class="logo-img"></i>Empregando a <b class="orange-text">inclusão</b></a>
                 <ul class="left hide-on-med-and-down position-relative left-divider show show-on-med-and-up">
-                    <li><a href="/" class="blue-compass white-text">Área do candidato</a></li>
-                    <li><a href="/" class="blue-compass white-text">Área da empresa</a></li>
-                    <li><a href="/" class="blue-compass white-text">Leis trabalhistas</a></li>
+                    <li><a href="/" class="blue-compass white-text textmenu">Área do candidato</a></li>
+                    <li><a href="/" class="blue-compass white-text textmenu">Área da empresa</a></li>
+                    <li><a href="/" class="blue-compass white-text textmenu">Leis trabalhistas</a></li>
                 </ul>
             </div>
             <ul class="right hide-on-med-and-down">
                 <!-- Em caso de visitante, mostra link login e botão cadastro-->
-                <li><a href="/login" class="btn bg-blue-compass rounded white-text">Entrar</a></li>
+                <li><button class="waves-effect waves-light btn modal-trigger" data-target="modal1">ENTRAR</button></li>
                 <!-- Em caso de usuário logado (user ou admin), mostra o olá e o menu dropdown -->
                 <li class="blue-compass white-text"></li>
             </ul>            
@@ -38,62 +38,62 @@
 
 <!-- inicio do formulario -->
     <div class="row formulario">
-      <h2>Cadastre seu Currículo</h2>
+      <h2>Cadastre-se aqui</h2>
         <div class="section">
         <p class="contato">INFORMAÇÕES DE CONTATO</p>        
           <div class="row">
-            <form action="/cadastrar-pessoa" method="POST" class="col s12" onsubmit="return validacao()">
+            <form action="/" method="POST" class="col s12" onsubmit="return validacao()">
               <div class="row">
                   <div class="input-field col s12">
-                    <input id="nome" type="text" name="nome" class="validate">
+                    <input placeholder="DIGITE SEU NOME" id="nome" type="text" name="nome" class="validate">
                     <label class="active" for="nome">Nome</label>
                   </div>
               </div>                                            
               <div class="row">
                   <div class="input-field col s12">
-                    <input id="email" type="email" name="email" class="validate">
+                    <input placeholder="DIGITE UM E-MAIL VÁLIDO" id="email" type="email" name="email" class="validate">
                     <label class="active" for="email">Email</label>
                   </div>
               </div>
               <div class="row">
                   <div class="input-field col s6 m6">
-                      <input id="password" type="password" name="senha" class="validate">
+                      <input placeholder="ESCOLHA UMA SENHA" id="password" type="password" name="senha" class="validate">
                       <label class="active" for="password">Senha</label>
                   </div>
                   <div class="input-field col s6 m6">
-                      <input id="repsenha" type="password" name="repsenha" class="active >%=user.invalidClass%>" placeholder=" " name="repsenha">
+                      <input placeholder="REPETIR SENHA" id="repsenha" type="password" name="repsenha" class="active >%=user.invalidClass%>" placeholder=" " name="repsenha">
                       <label class="active" for="repsenha">Repetir senha</label>
                   </div>
               </div>
                
-                
+
 
 
       <!-- inicio do select do enquadramento -->
       <select class="browser-default" id="enquadramento" name="enquadramento">
         <option value="" disabled selected>Enquadramento</option>
         <optgroup label="Deficiência Física">
-                <option value="Deficiência Física - Amputação">Amputação</option>
-                <option value="Deficiência Física - Hemiplegia">Hemiplegia</option>
-                <option value="Deficiência Física - Membros com deformidade congênita ou adquirida">Membros com deformidade congênita ou adquirida</option>
-                <option value="Deficiência Física - Monoparesia">Monoparesia</option>
-                <option value="Deficiência Física - Monoplegia">Monoplegia</option>
-                <option value="Deficiência Física - Paralisia cerebral">Paralisia cerebral</option>
-                <option value="Deficiência Física - Paraparesia">Paraparesia</option>
-                <option value="Deficiência Física - Paraplegia">Paraplegia</option>
-                <option value="Deficiência Física - Tetraparesia">Tetraparesia</option>
-                <option value="Deficiência Física - Tetraplegia">Tetraplegia</option>
-                <option value="Deficiência Física - Triparesia">Triparesia</option>
-                <option value="Deficiência Física - Triplegia">Triplegia</option>
-                <option value="Deficiência Física - Nanismo">Nanismo</option>
-                <option value="Deficiência Física - Ostomia">Ostomia</option>
-                <option value="Deficiência Física - Hemiparesia">Hemiparesia</option>
-                <option value="Deficiência Física - Outros">Outros</option>
+                <option value="Amputação">Amputação</option>
+                <option value="Hemiplegia">Hemiplegia</option>
+                <option value="Membros com deformidade congênita ou adquirida">Membros com deformidade congênita ou adquirida</option>
+                <option value="Monoparesia">Monoparesia</option>
+                <option value="Monoplegia">Monoplegia</option>
+                <option value="Paralisia cerebral">Paralisia cerebral</option>
+                <option value="Paraparesia">Paraparesia</option>
+                <option value="Paraplegia">Paraplegia</option>
+                <option value="Tetraparesia">Tetraparesia</option>
+                <option value="Tetraplegia">Tetraplegia</option>
+                <option value="Triparesia">Triparesia</option>
+                <option value="Triplegia">Triplegia</option>
+                <option value="Nanismo">Nanismo</option>
+                <option value="Ostomia">Ostomia</option>
+                <option value="Hemiparesia">Hemiparesia</option>
+                <option value="Outros">Outros</option>
         </optgroup>
         <optgroup label="Deficiência Auditiva">
-                <option value="Deficiência Auditiva - Surdez moderada">Surdez moderada</option>
-                <option value="Deficiência Auditiva - Surdez severa">Surdez severa</option>
-                <option value="Deficiência Auditiva - Anacusia">Anacusia</option>
+                <option value="Surdez moderada">Surdez moderada</option>
+                <option value="Surdez severa">Surdez severa</option>
+                <option value="Anacusia">Anacusia</option>
         </optgroup>
         <optgroup label="Deficiência Visual">
                 <option value="Deficiência Visual - Baixa Visão">Baixa Visão</option>
@@ -116,7 +116,7 @@
                       <div class="aviso">
                             <p>
                               <label>
-                                      <input type="checkbox" class="check" checked="checked" />
+                                      <input type="checkbox" class="check" required />
                                       <span>Aviso: cadastro exclusivo para pessoas com deficiência. Declaro que sou pessoa com deficiência ou reabilitado do INSS nos termos da legislação brasileira. </span>
                               </label>
                              </p>                                                                     
@@ -125,7 +125,7 @@
 
       <!-- botão cadastrar -->
                 <div class="col s12 center btn-margin-top cadastrar">
-                    <input class="btn bg-blue-compass rounded" type="submit" value="Cadastrar" />
+                    <input class="btn bg-blue-compass rounded alert" type="submit" value="Cadastrar"/>
                </div>
             </form>
       <!-- fim do formulario -->
@@ -133,5 +133,40 @@
         </div>
     </div>
 
-</body>
+    <!-- //---------------------------- -->
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>BEM VINDO</h4>
+  
+        <div class="row">
+          <form class="col s12">
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="image_title" type="email" class="validate">
+                <label for="image_title">E-mail</label>
+              </div>
+            </div>       
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="image_title" type="password" class="validate">
+                <label for="image_description">Senha</label>
+              </div>
+            </div>             
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class=" modal-action modal-close waves-effect waves-green btn-flat">Entrar</a>
+        <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Sair</a>
+
+      </div>
+    </div>
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+ 
+<!-- ------------------------------------ -->
+  </body>
 </html>

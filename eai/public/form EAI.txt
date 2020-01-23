@@ -1,0 +1,53 @@
++-------------------------+
+Dados Pessoais
++-------------------------+
+
+Nome 
+Sexo
+estado Civil
+cpf
+RG
+data de Nascimento
+CNH
+
++-------------------------+
+Formação Academica
++-------------------------+
+
+Grau: [fundamental, médio, superior, 
+pós graduação, metrado, doutorado]
+
+situação: [completo, incompleto] [select]
+instituição [label]
+curso [label]
+ano de inicio [label type date]
+ano de conclusão
+
++-------------------------+
+Conhecimentos específicos 
++-------------------------+
+
+Inglês - nivel [select]
+Espanhol - nivel [select]
+Computação (office, lógica de programação, hardware) [select]
+cursos [text area] 
+
++-------------------------+
+Experiência Profissional
++-------------------------+
+
+Empresa
+situação
+setor
+atividades realizadas [text area]
+Ultimo Cargo
+Data de inicio
+data e termino
+
++-------------------------+
+áreas da interesse
++-------------------------+
+
+Cargos[*]
+Setor[*]
+Pretensão salarial
