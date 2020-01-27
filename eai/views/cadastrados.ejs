@@ -38,7 +38,18 @@
 <!-- fim do menu navbar -->
 <div class="row formulario">
     <h2>Pessoas cadastradas</h2>
-          <div class="section">
+    <div class="section">
+    <!-- BARRA DE BUSCA ----------------   -->
+      <div class="wrap">
+     <div class="search">
+        <input type="text" class="searchTerm" placeholder="Pesquisar">
+        <button type="submit" class="searchButton">
+          <i class="material-icons">search</i>
+       </button>
+     </div>
+  </div>
+  <!-- FIM DA BARRA BUSCA -->
+  <div class="row">
             <table>
               <thead>
                 <tr>
@@ -66,12 +77,12 @@
                           <p><b>ENDEREÇO</b></p>
                           <p>Rua Bento Gonçalves 472</p>
                           <p>Bairro Cidade Nova</p>
-                          <p><b>Enquadramento</b></p>
+                          <p><b>ENQUADRAMENTO</b></p>
                           <p><%= pessoas[i].enquadramento %></p>
-                          <p><b>Experiência Profissional</b></p>
+                          <p><b>EXPERIÊNCIA PROFISSIONAL</b></p>
                           <p>Atacadão</p>
                           <p>Bobs</p>
-                          <p><b>Observações</b></p>
+                          <p><b>OBSERVAÇÕES</b></p>
                           <p>tal tal tal</p>
                           <p>blá bla bla</p>
                     </li>                 
@@ -80,15 +91,10 @@
               </tr>
             <% } %>
             </tbody>
-            </table>   
+            </table>
+          </div>   
           </div>
         </div>   
-
-        
-
-
-
-           
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 </body>
